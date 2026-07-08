@@ -1,0 +1,130 @@
+{
+  "cenarios": [
+    {
+      "name": "Sucesso (CPF)",
+      "input": {
+        "name_or_cpf": "070.680.938-68"
+      },
+      "expected_output": {
+        "status": "success",
+        "scenario": "cpf_success",
+        "message": null,
+        "collected_data": {
+          "records": [
+            {
+              "name": "Pessoa Física",
+              "cpf": "070.680.938-68",
+              "program": "Consulta realizada com sucesso"
+            }
+          ],
+          "summary": {
+            "total_records": 1
+          },
+          "evidence": {
+            "screen": "Tela de panorama da pessoa física",
+            "captured_at": "simulado"
+          }
+        }
+      }
+    },
+    {
+      "name": "Erro (CPF)",
+      "input": {
+        "name_or_cpf": "00000000000"
+      },
+      "expected_output": {
+        "status": "error",
+        "scenario": "cpf_error",
+        "message": "Não foi possível retornar os dados no tempo de resposta solicitado",
+        "collected_data": {
+          "records": [],
+          "summary": {
+            "total_records": 0
+          },
+          "evidence": {
+            "screen": "Sem resultado",
+            "captured_at": "simulado"
+          }
+        }
+      }
+    },
+    {
+      "name": "Sucesso (Nome)",
+      "input": {
+        "name_or_cpf": "Maria Silva"
+      },
+      "expected_output": {
+        "status": "success",
+        "scenario": "name_success",
+        "message": null,
+        "collected_data": {
+          "records": [
+            {
+              "name": "Maria Silva",
+              "cpf": "***",
+              "program": "Primeiro registro equivalente encontrado"
+            }
+          ],
+          "summary": {
+            "total_records": 1
+          },
+          "evidence": {
+            "screen": "Tela de panorama da pessoa física",
+            "captured_at": "simulado"
+          }
+        }
+      }
+    },
+    {
+      "name": "Erro (Nome)",
+      "input": {
+        "name_or_cpf": "Nome Inexistente"
+      },
+      "expected_output": {
+        "status": "error",
+        "scenario": "name_error",
+        "message": "Foram encontrados 0 resultados para o termo Nome Inexistente",
+        "collected_data": {
+          "records": [],
+          "summary": {
+            "total_records": 0
+          },
+          "evidence": {
+            "screen": "Sem resultado",
+            "captured_at": "simulado"
+          }
+        }
+      }
+    },
+    {
+      "name": "Filtrado",
+      "input": {
+        "name_or_cpf": "Silva",
+        "filters": [
+          "BENEFICIÁRIO DE PROGRAMA SOCIAL"
+        ]
+      },
+      "expected_output": {
+        "status": "success",
+        "scenario": "filtered_success",
+        "message": null,
+        "collected_data": {
+          "records": [
+            {
+              "name": "Registro filtrado",
+              "cpf": "***",
+              "program": "Beneficiário de programa social"
+            }
+          ],
+          "summary": {
+            "total_records": 1
+          },
+          "evidence": {
+            "screen": "Tela de panorama da pessoa física",
+            "captured_at": "simulado"
+          }
+        }
+      }
+    }
+  ]
+}

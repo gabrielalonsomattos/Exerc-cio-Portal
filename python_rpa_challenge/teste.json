@@ -1,0 +1,17 @@
+{
+  "status": "ok",
+  "payload": {
+    "name_or_cpf": "070.680.938-68",
+    "filters": [
+      "BENEFICIÁRIO DE PROGRAMA SOCIAL"
+    ]
+  },
+  "collected_data": {
+    "source": "Portal da Transparência",
+    "searched_value": "070.680.938-68",
+    "filters_applied": [
+      "BENEFICIÁRIO DE PROGRAMA SOCIAL"
+    ],
+    "summary": {}
+  }
+}

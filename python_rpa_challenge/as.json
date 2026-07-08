@@ -1,0 +1,32 @@
+{
+  "status": "success",
+  "scenario": "filtered_success",
+  "payload": {
+    "name_or_cpf": "Amilia",
+    "filters": [
+      "BENEFICIÁRIO DE PROGRAMA SOCIAL"
+    ]
+  },
+  "message": null,
+  "collected_data": {
+    "source": "Portal da Transparência",
+    "searched_value": "Amilia",
+    "filters_applied": [
+      "BENEFICIÁRIO DE PROGRAMA SOCIAL"
+    ],
+    "records": [
+      {
+        "name": "Registro filtrado",
+        "cpf": "***",
+        "program": "Beneficiário de programa social"
+      }
+    ],
+    "summary": {
+      "total_records": 1
+    },
+    "evidence": {
+      "screen": "Tela de panorama da pessoa física",
+      "captured_at": "simulado"
+    }
+  }
+}
